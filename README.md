@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-Bakalan ada error, itu karena file dist/server.js belum ada, file tersebut akan terbuat secara otomatis. Progress akan terlihat seperti berikut:
+Akan ada error, itu karena file dist/server.js belum ada, file tersebut akan terbuat secara otomatis. Progress akan terlihat seperti berikut:
 
 ![Alt Text](https://github.com/ybasori/otoklix_test/raw/master/20220311_004456.gif)
 
