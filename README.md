@@ -20,6 +20,8 @@ Dalam proses ini akan ada error, itu dikarenakan file dist/server.js belum ada, 
 
 ![Alt Text](https://github.com/ybasori/otoklix_test/raw/master/20220311_004456.gif)
 
+Kemudian aplikasi bisa dibuka di browser dengan url http://localhost:3000
+
 #### Untuk Production
 
 Pertama,
