@@ -14,7 +14,7 @@ npm install
 npm run dev
 ```
 
-Dalam proses ini akan ada error, itu karena file dist/server.js belum ada, file tersebut akan dibuat secara otomatis. Proses pada terminal akan terlihat seperti berikut:
+Dalam proses ini akan ada error, itu dikarenakan file dist/server.js belum ada, file tersebut akan dibuat secara otomatis. Proses pada terminal akan terlihat seperti berikut:
 
 ![Alt Text](https://github.com/ybasori/otoklix_test/raw/master/20220311_004456.gif)
 
