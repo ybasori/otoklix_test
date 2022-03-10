@@ -4,6 +4,8 @@ project ini menggunakan React SSR
 
 #### Instalasi
 
+copy file .env.example dan ubah namanya menjadi .env
+
 ```sh
 npm install
 ```
