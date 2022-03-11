@@ -91,6 +91,7 @@ const Edit = () => {
                     placeholder="Title"
                     onChange={onChange}
                     value={value}
+                    disabled={blog.isLoadingGetBlogShow}
                   />
                   {errors.title && (
                     <div
@@ -119,6 +120,7 @@ const Edit = () => {
                     rows={3}
                     onChange={onChange}
                     value={value}
+                    disabled={blog.isLoadingGetBlogShow}
                   ></textarea>
                   {errors.content && (
                     <div
@@ -145,7 +147,7 @@ const Edit = () => {
           <button
             type="submit"
             className="btn btn-primary"
-            disabled={blog.isLoadingPutBlogUpdate}
+            disabled={blog.isLoadingPutBlogUpdate || blog.isLoadingGetBlogShow}
           >
             Update
           </button>
