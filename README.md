@@ -18,6 +18,8 @@ cara menjalankan unit test:
 npm run test
 ```
 
+![Alt Text](https://github.com/ybasori/otoklix_test/raw/master/20220311_195015.gif)
+
 #### Untuk Development
 
 ```sh
