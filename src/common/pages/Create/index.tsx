@@ -65,6 +65,7 @@ const Create = () => {
               render={({ field: { onChange, value } }) => (
                 <>
                   <input
+                    data-testid="input-title"
                     type="text"
                     className={`form-control ${errors.title && "is-invalid"}`}
                     id="exampleFormControlInput1"
@@ -94,6 +95,7 @@ const Create = () => {
               render={({ field: { onChange, value } }) => (
                 <>
                   <textarea
+                    data-testid="input-content"
                     className={`form-control ${errors.content && "is-invalid"}`}
                     id="exampleFormControlTextarea1"
                     rows={3}
@@ -123,6 +125,7 @@ const Create = () => {
           />
         </div> */}
           <button
+            data-testid="btn-submit"
             type="submit"
             className="btn btn-primary"
             disabled={blog.isLoadingPostBlogStore}

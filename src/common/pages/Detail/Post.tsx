@@ -27,7 +27,9 @@ const Post: React.FC<Props> = ({
       {data && (
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">{data.title}</h5>
+            <h5 className="card-title" data-testid="post-title">
+              {data.title}
+            </h5>
             <h6 className="card-subtitle mb-2 text-muted">
               {data.published_at}
             </h6>

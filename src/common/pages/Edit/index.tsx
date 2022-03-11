@@ -71,70 +71,78 @@ const Edit = () => {
   }, [oneTime, blog.isLoadingGetBlogShow, blog.successGetBlogShow]);
 
   return (
-    <div className="row">
-      <div className="col-md-12">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="mb-3">
-            <label htmlFor="exampleFormControlInput1" className="form-label">
-              Title
-            </label>
+    <>
+      <div className="row">
+        <div className="col-md-12">
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="mb-3">
+              <label htmlFor="exampleFormControlInput1" className="form-label">
+                Title
+              </label>
 
-            <Controller
-              name="title"
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <>
-                  <input
-                    type="text"
-                    className={`form-control ${errors.title && "is-invalid"}`}
-                    id="exampleFormControlInput1"
-                    placeholder="Title"
-                    onChange={onChange}
-                    value={value}
-                    disabled={blog.isLoadingGetBlogShow}
-                  />
-                  {errors.title && (
-                    <div
-                      id="validationServerTitleFeedback"
-                      className="invalid-feedback"
-                    >
-                      {errors.title?.message}
-                    </div>
-                  )}
-                </>
-              )}
-            />
-          </div>
-          <div className="mb-3">
-            <label htmlFor="exampleFormControlTextarea1" className="form-label">
-              Content
-            </label>
-            <Controller
-              name="content"
-              control={control}
-              render={({ field: { onChange, value } }) => (
-                <>
-                  <textarea
-                    className={`form-control ${errors.content && "is-invalid"}`}
-                    id="exampleFormControlTextarea1"
-                    rows={3}
-                    onChange={onChange}
-                    value={value}
-                    disabled={blog.isLoadingGetBlogShow}
-                  ></textarea>
-                  {errors.content && (
-                    <div
-                      id="validationServerTitleFeedback"
-                      className="invalid-feedback"
-                    >
-                      {errors.content?.message}
-                    </div>
-                  )}
-                </>
-              )}
-            />
-          </div>
-          {/* <div className="mb-3">
+              <Controller
+                name="title"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <>
+                    <input
+                      data-testid="input-title"
+                      type="text"
+                      className={`form-control ${errors.title && "is-invalid"}`}
+                      id="exampleFormControlInput1"
+                      placeholder="Title"
+                      onChange={onChange}
+                      value={value}
+                      disabled={blog.isLoadingGetBlogShow}
+                    />
+                    {errors.title && (
+                      <div
+                        id="validationServerTitleFeedback"
+                        className="invalid-feedback"
+                      >
+                        {errors.title?.message}
+                      </div>
+                    )}
+                  </>
+                )}
+              />
+            </div>
+            <div className="mb-3">
+              <label
+                htmlFor="exampleFormControlTextarea1"
+                className="form-label"
+              >
+                Content
+              </label>
+              <Controller
+                name="content"
+                control={control}
+                render={({ field: { onChange, value } }) => (
+                  <>
+                    <textarea
+                      data-testid="input-content"
+                      className={`form-control ${
+                        errors.content && "is-invalid"
+                      }`}
+                      id="exampleFormControlTextarea1"
+                      rows={3}
+                      onChange={onChange}
+                      value={value}
+                      disabled={blog.isLoadingGetBlogShow}
+                    ></textarea>
+                    {errors.content && (
+                      <div
+                        id="validationServerTitleFeedback"
+                        className="invalid-feedback"
+                      >
+                        {errors.content?.message}
+                      </div>
+                    )}
+                  </>
+                )}
+              />
+            </div>
+            {/* <div className="mb-3">
           <label htmlFor="exampleFormControlInput1" className="form-label">
             Publish at
           </label>
@@ -144,16 +152,20 @@ const Edit = () => {
             id="exampleFormControlInput1"
           />
         </div> */}
-          <button
-            type="submit"
-            className="btn btn-primary"
-            disabled={blog.isLoadingPutBlogUpdate || blog.isLoadingGetBlogShow}
-          >
-            Update
-          </button>
-        </form>
+            <button
+              data-testid="btn-submit"
+              type="submit"
+              className="btn btn-primary"
+              disabled={
+                blog.isLoadingPutBlogUpdate || blog.isLoadingGetBlogShow
+              }
+            >
+              Update
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -26,7 +26,11 @@ const Home: FC<Props> = ({
       {loading && "Loading ..."}
       {data &&
         data.map((item, index) => (
-          <div className="card" key={`post-${index + 1}`}>
+          <div
+            className="card"
+            key={`post-${index + 1}`}
+            data-testid={`post-data`}
+          >
             <div className="card-body">
               <h5 className="card-title">
                 <Link to={`/${item.id}`}>{item.title}</Link>
@@ -46,6 +50,7 @@ const Home: FC<Props> = ({
                     onClick={() => onDelete(item.id)}
                     className="btn btn-danger"
                     disabled={deleting}
+                    data-testid={`delete-${index + 1}`}
                   >
                     Delete
                   </button>
