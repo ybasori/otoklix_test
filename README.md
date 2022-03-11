@@ -45,3 +45,7 @@ Lalu,
 ```sh
 npm run start
 ```
+
+#### DEMO
+
+![Alt Text](https://github.com/ybasori/otoklix_test/raw/master/20220311_195625.gif)
