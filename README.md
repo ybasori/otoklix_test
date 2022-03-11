@@ -10,6 +10,14 @@ copy file .env.example dan ubah namanya menjadi .env, lalu:
 npm install
 ```
 
+### Test
+
+cara menjalankan unit test:
+
+```sh
+npm run test
+```
+
 #### Untuk Development
 
 ```sh
